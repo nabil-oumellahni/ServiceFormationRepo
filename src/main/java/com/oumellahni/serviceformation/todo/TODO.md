@@ -1,0 +1,11 @@
+TODO :
+- Fix :  open-api dto schema won't display.
+- Add : log not found field.
+- Add : findXByContains
+- Add : calcul
+- Fix : Error response status is 500 message
+- Fix : Update Objects (log + dto)
+-
+-
+-
+-
