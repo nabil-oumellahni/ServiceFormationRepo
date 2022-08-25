@@ -30,6 +30,11 @@ public class FormationController implements FormationApi {
     }
 
     @Override
+    public FormationDto findFormationByTitre(String titre) {
+        return formationService.findFormationByTitre(titre);
+    }
+
+    @Override
     public FormationDto findFormationByCode(String code) {
         return formationService.findFormationByCode(code);
     }
@@ -37,6 +42,21 @@ public class FormationController implements FormationApi {
     @Override
     public List<FormationDto> findAll() {
         return formationService.findAll();
+    }
+
+    @Override
+    public List<FormationDto> findAllByCategoryId(Integer idCategory) {
+        return formationService.findAllByCategoryId(idCategory);
+    }
+
+    @Override
+    public List<FormationDto> findAllByFormateurId(Integer idFormateur) {
+        return formationService.findAllByFormateurId(idFormateur);
+    }
+
+    @Override
+    public List<FormationDto> findAllByDateFormationId(Integer idDateFormation) {
+        return formationService.findAllByDateFormationId(idDateFormation);
     }
 
     @Override

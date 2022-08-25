@@ -3,6 +3,7 @@ package com.oumellahni.serviceformation.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -15,8 +16,9 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @Entity
-@Table(name = "client")
+@Table
 public class Client extends AbstractEntity {
 
     @Column
@@ -43,10 +45,5 @@ public class Client extends AbstractEntity {
 
     @OneToMany(mappedBy = "client")
     private List<CommandeClient> commandeClients;
-
-
-//    @Column(name = "identreprise")
-//    private Integer idEntreprise;
-//
 
 }

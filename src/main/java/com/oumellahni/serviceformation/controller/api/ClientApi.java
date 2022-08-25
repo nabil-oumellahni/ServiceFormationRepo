@@ -1,7 +1,6 @@
 package com.oumellahni.serviceformation.controller.api;
 
 import com.oumellahni.serviceformation.dto.ClientDto;
-import com.oumellahni.serviceformation.dto.FormationDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -72,7 +71,7 @@ public interface ClientApi {
     ClientDto findById(@PathVariable(CLIENT_PATH_VARIABLE_ID) Integer id);
 
     @GetMapping(
-            value = APP_ROOT + CLIENT + FILTER + CLIENT_PATH_NOM,
+            value = APP_ROOT + CLIENT + FILTER + BY_NOM +  CLIENT_PATH_NOM,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @Operation(
@@ -95,7 +94,7 @@ public interface ClientApi {
     ClientDto findClientByNom(@PathVariable(CLIENT_PATH_VARIABLE_NOM) String nom);
 
     @GetMapping(
-            value = APP_ROOT + CLIENT + FILTER + CLIENT_PATH_PRENOM,
+            value = APP_ROOT + CLIENT + FILTER + BY_PRENOM + CLIENT_PATH_PRENOM,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @Operation(
@@ -118,7 +117,7 @@ public interface ClientApi {
     ClientDto findClientByPrenom(@PathVariable(CLIENT_PATH_VARIABLE_PRENOM) String prenom);
 
     @GetMapping(
-            value = APP_ROOT + CLIENT + FILTER + CLIENT_PATH_NUM_TEL,
+            value = APP_ROOT + CLIENT + FILTER + BY_NUM_TEL + CLIENT_PATH_NUM_TEL,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @Operation(
@@ -160,7 +159,7 @@ public interface ClientApi {
     List<ClientDto> findAll();
 
     @GetMapping(
-            value = APP_ROOT + CLIENT + FILTER + "ddd",
+            value = APP_ROOT + CLIENT + FILTER + ALL + BY_ENTREPRISE_ID,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @Operation(
@@ -192,6 +191,5 @@ public interface ClientApi {
                     description = "Le client a ete supprime"
             )
     })
-
     void delete(@PathVariable(CLIENT_PATH_VARIABLE_ID) Integer id);
 }

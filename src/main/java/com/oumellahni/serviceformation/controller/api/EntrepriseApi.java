@@ -71,7 +71,7 @@ public interface EntrepriseApi {
     EntrepriseDto findById(@PathVariable(ENTREPRISE_PATH_VARIABLE_ID) Integer id);
 
     @GetMapping(
-            value = APP_ROOT + ENTREPRISE + FILTER + ENTREPRISE_PATH_NOM,
+            value = APP_ROOT + ENTREPRISE + FILTER + BY_NOM + ENTREPRISE_PATH_NOM,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @Operation(

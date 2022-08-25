@@ -25,6 +25,10 @@ public class DateFormation extends AbstractEntity {
     @Column
     private Date date;
 
+    //----------------------------------------------------------------
+    // TODO : may be we have dateDebut and dateFin
+    //----------------------------------------------------------------
+
     @OneToMany(mappedBy = "dateFormation")
     private List<Formation> formations;
 }
