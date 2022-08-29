@@ -1,8 +1,6 @@
 package com.oumellahni.serviceformation.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -13,7 +11,8 @@ import java.io.Serializable;
  * at 4:27 PM - 8/17/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Embeddable

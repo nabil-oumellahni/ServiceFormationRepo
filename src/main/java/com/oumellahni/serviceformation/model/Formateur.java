@@ -1,8 +1,9 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,7 +13,8 @@ import java.util.List;
  * at 10:22 AM - 8/18/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -40,9 +42,7 @@ public class Formateur extends AbstractEntity {
     @OneToMany(mappedBy = "formateur")
     private List<Formation> formations;
 
-//    @Column(name = "identreprise")
-//    private Integer idEntreprise;
-
 //    @OneToMany(mappedBy = "fournisseur")
 //    private List<CommandeFournisseur> commandeFournisseurs;
+
 }

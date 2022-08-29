@@ -1,8 +1,9 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -13,7 +14,8 @@ import java.util.List;
  * at 7:45 PM - 8/17/2022
  */
 
- @Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -42,7 +44,7 @@ public class Formation extends AbstractEntity {
     private String photo;
 
     @ManyToOne
-    @JoinColumn(name = "id_category")
+    @JoinColumn()
     private Category category;
 
     @OneToMany(mappedBy = "formation")
@@ -52,12 +54,15 @@ public class Formation extends AbstractEntity {
     private List<Niveau> niveaux;
 
     @ManyToOne
-    @JoinColumn(name = "id_formateur")
+    @JoinColumn()
     private Formateur formateur;
 
     @ManyToOne
-    @JoinColumn(name = "id_date_formation")
+    @JoinColumn()
     private DateFormation dateFormation;
+
+        @OneToMany(mappedBy = "formation")
+    private List<LigneCommandeClient> ligneCommandeClients;
 
 }
 
@@ -67,9 +72,6 @@ public class Formation extends AbstractEntity {
 
 //    @OneToMany(mappedBy = "article")
 //    private List<LigneVente> ligneVentes;
-
-//    @OneToMany(mappedBy = "article")
-//    private List<LigneCommandeClient> ligneCommandeClients;
 
 //    @OneToMany(mappedBy = "article")
 //    private List<LigneCommandeFournisseur> ligneCommandeFournisseurs;

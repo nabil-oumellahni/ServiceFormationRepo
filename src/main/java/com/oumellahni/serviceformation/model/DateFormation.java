@@ -1,8 +1,9 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,7 +16,8 @@ import java.util.List;
  * @author N.Oumellahni
  * at 10:26 AM - 8/18/2022
  */
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -31,4 +33,5 @@ public class DateFormation extends AbstractEntity {
 
     @OneToMany(mappedBy = "dateFormation")
     private List<Formation> formations;
+
 }

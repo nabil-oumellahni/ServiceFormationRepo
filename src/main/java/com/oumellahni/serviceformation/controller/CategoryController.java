@@ -2,7 +2,6 @@ package com.oumellahni.serviceformation.controller;
 
 import com.oumellahni.serviceformation.controller.api.CategoryApi;
 import com.oumellahni.serviceformation.dto.CategoryDto;
-import com.oumellahni.serviceformation.dto.FormationDto;
 import com.oumellahni.serviceformation.service.CategoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;

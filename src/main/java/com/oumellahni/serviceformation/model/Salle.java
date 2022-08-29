@@ -1,8 +1,9 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
@@ -11,7 +12,8 @@ import javax.persistence.*;
  * at 7:53 PM - 8/17/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -22,9 +24,7 @@ public class Salle extends AbstractEntity {
     private String code;
 
     @ManyToOne
-    @JoinColumn(name = "id_formation")
+    @JoinColumn
     private Formation formation;
-
-
 
 }

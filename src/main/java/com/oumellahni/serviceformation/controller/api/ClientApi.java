@@ -30,13 +30,13 @@ public interface ClientApi {
     )
     @Operation(
             summary = "Enregistrer un client",
-            description = "Cette methode permet d'enregistrer ou modifier une formation",
+            description = "Cette methode permet d'enregistrer ou modifier un client",
             tags = {"client"}
     )
     @ApiResponses(value = {
             @ApiResponse(
                     responseCode = "200",
-                    description = "Lae client cree / modifie.",
+                    description = "Le client cree / modifie.",
                     content = @Content(array = @ArraySchema(
                             schema = @Schema(implementation = ClientDto.class)))
             ),

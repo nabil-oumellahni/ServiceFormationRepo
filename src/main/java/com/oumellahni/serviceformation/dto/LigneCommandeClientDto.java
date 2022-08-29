@@ -20,6 +20,8 @@ public class LigneCommandeClientDto {
 
     private CommandeClientDto commandeClient;
 
+    private FormationDto formation;
+
     public static LigneCommandeClientDto fromEntity(LigneCommandeClient ligneCommandeClient) {
         if (ligneCommandeClient == null) {
             return null;
@@ -28,6 +30,7 @@ public class LigneCommandeClientDto {
                 .id(ligneCommandeClient.getId())
                 .prixUnitaire(ligneCommandeClient.getPrixUnitaire())
                 .commandeClient(CommandeClientDto.fromEntity(ligneCommandeClient.getCommandeClient()))
+                .formation(FormationDto.fromEntity((ligneCommandeClient.getFormation())))
                 .build();
     }
 
@@ -39,6 +42,7 @@ public class LigneCommandeClientDto {
         ligneCommandeClient.setId(ligneCommandeClientDto.getId());
         ligneCommandeClient.setPrixUnitaire(ligneCommandeClientDto.getPrixUnitaire());
         ligneCommandeClient.setCommandeClient(CommandeClientDto.toEntity(ligneCommandeClientDto.getCommandeClient()));
+        ligneCommandeClient.setFormation(FormationDto.toEntity(ligneCommandeClientDto.getFormation()));
         return ligneCommandeClient;
     }
 }

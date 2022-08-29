@@ -1,7 +1,6 @@
 package com.oumellahni.serviceformation.service;
 
 import com.oumellahni.serviceformation.dto.FormationDto;
-import com.oumellahni.serviceformation.model.Formation;
 
 import java.util.List;
 

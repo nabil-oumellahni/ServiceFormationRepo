@@ -1,22 +1,21 @@
 package com.oumellahni.serviceformation.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author N.Oumellahni
  * at 4:33 PM - 8/17/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 @Entity
 @Table
 public class Client extends AbstractEntity {
@@ -40,7 +39,7 @@ public class Client extends AbstractEntity {
     private String numTel;
 
     @ManyToOne
-    @JoinColumn(name = "id_entreprise")
+    @JoinColumn()
     private Entreprise entreprise;
 
     @OneToMany(mappedBy = "client")

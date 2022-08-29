@@ -1,8 +1,9 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
@@ -12,7 +13,8 @@ import java.util.List;
  * at 4:25 PM - 8/17/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity

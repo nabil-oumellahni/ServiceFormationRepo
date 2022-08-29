@@ -3,7 +3,6 @@ package com.oumellahni.serviceformation.repository;
 import com.oumellahni.serviceformation.model.LigneCommandeClient;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -17,7 +16,6 @@ public interface LigneCommandeClientRepository extends JpaRepository <LigneComma
     Optional<LigneCommandeClient>findAllByCommandeClientId(Integer idCommandeClient);
 
     //may be ByCommandeClientCode
-    Optional<LigneCommandeClient>findAllByCommandeClientCode(String codeCommandeClient);
+    Optional<LigneCommandeClient>findAllByFormationId(Integer idFormation);
 
-//    List<LigneCommandeClient> findAllByArticleId(Integer id);
 }

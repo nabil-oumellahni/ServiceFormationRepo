@@ -2,6 +2,7 @@ package com.oumellahni.serviceformation.service;
 
 
 import com.oumellahni.serviceformation.dto.CommandeClientDto;
+import com.oumellahni.serviceformation.dto.LigneCommandeClientDto;
 
 import java.util.List;
 
@@ -18,18 +19,20 @@ public interface CommandeClientService {
 
     CommandeClientDto findCommandeClientByCode(String code);
 
-    List<CommandeClientDto> findAllByClientId(Integer idClient);
-
+//    List<CommandeClientDto> findAllByClientId(Integer idClient);
+//
     List<CommandeClientDto> findAll();
-
+//
     void delete (Integer id);
 
-    CommandeClientDto updateClient(Integer idCommande, Integer idClient);
+//    CommandeClientDto updateClient(Integer idCommande, Integer idClient);
+//
+//    CommandeClientDto updateFormation(Integer idCommande, Integer idLigneCommande, Integer newIdFormation);
+//
+//    // Delete article ==> delete LigneCommandeClient
+//    CommandeClientDto deleteFormation(Integer idCommande, Integer idLigneCommande);
 
-    CommandeClientDto updateArticle(Integer idCommande, Integer idLigneCommande, Integer newIdArticle);
-
-    // Delete article ==> delete LigneCommandeClient
-    CommandeClientDto deleteArticle(Integer idCommande, Integer idLigneCommande);
+//    List<LigneCommandeClientDto> findAllLignesCommandesClientByCommandeClientId(Integer idCommande);
 
 
 }

@@ -28,8 +28,6 @@ public class FormationServiceImpl implements FormationService {
 
     @Override
     public FormationDto save(FormationDto dto) {
-        System.out.println("CLientDto au niveau de FormationServiceImpl : ");
-        System.out.println(dto);
         List<String> errors = FormationValidator.validate(dto);
         if (!errors.isEmpty()) {
             log.error("Formation est non valide {}", dto);

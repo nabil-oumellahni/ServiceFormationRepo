@@ -11,7 +11,6 @@ import com.oumellahni.serviceformation.repository.CommandeClientRepository;
 import com.oumellahni.serviceformation.service.ClientService;
 import com.oumellahni.serviceformation.validator.ClientValidator;
 import lombok.AllArgsConstructor;
-import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -26,7 +25,6 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @AllArgsConstructor
-@ToString
 public class ClientServiceImpl implements ClientService {
 
     private ClientRepository clientRepository;
@@ -34,11 +32,8 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public ClientDto save(ClientDto dto) {
-        System.out.println("CLientDto au niveau de ClientServiceImpl : ");
-        System.out.println(dto);
         List<String> errors = ClientValidator.validate(dto);
         if (!errors.isEmpty()) {
-            System.out.println("ERRORS : " + errors.toString());
             log.error("Client n'est pas valide {}", dto);
             throw new InvalidEntityException(
                     "Le client n'est pas valide.",

@@ -45,6 +45,9 @@ public class FormationDto {
 
     private DateFormationDto dateFormation;
 
+    @JsonIgnore
+    private List<LigneCommandeClient> ligneCommandeClients;
+
     public static FormationDto fromEntity(Formation formation) {
         if (formation == null) {
             return null;

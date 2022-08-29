@@ -1,21 +1,25 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.Hibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @author N.Oumellahni
  * at 7:49 PM - 8/17/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -33,4 +37,5 @@ public class Category extends AbstractEntity {
 
     @OneToMany(mappedBy = "category")
     private List<Formation> formations;
+
 }

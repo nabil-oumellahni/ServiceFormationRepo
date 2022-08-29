@@ -1,7 +1,5 @@
 package com.oumellahni.serviceformation.controller.api;
 
-import com.oumellahni.serviceformation.dto.CategoryDto;
-import com.oumellahni.serviceformation.dto.ClientDto;
 import com.oumellahni.serviceformation.dto.FormationDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;

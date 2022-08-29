@@ -16,7 +16,7 @@ import java.util.List;
 @Builder
 public class FormateurDto {
 
-    private Integer idFormateur;
+    private Integer id;
 
     private String nom;
 
@@ -38,7 +38,7 @@ public class FormateurDto {
             return null;
         }
         return FormateurDto.builder()
-                .idFormateur(formateur.getId())
+                .id(formateur.getId())
                 .nom(formateur.getNom())
                 .prenom(formateur.getPrenom())
                 .adresse(AdresseDto.fromEntity(formateur.getAdresse()))
@@ -53,7 +53,7 @@ public class FormateurDto {
             return null;
         }
         Formateur formateur = new Formateur();
-        formateur.setId(formateurDto.getIdFormateur());
+        formateur.setId(formateurDto.getId());
         formateur.setNom(formateurDto.getNom());
         formateur.setPrenom(formateurDto.getPrenom());
         formateur.setAdresse(AdresseDto.toEntity(formateurDto.getAdresse()));

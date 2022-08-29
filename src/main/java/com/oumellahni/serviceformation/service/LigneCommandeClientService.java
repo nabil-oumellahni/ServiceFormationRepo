@@ -17,7 +17,7 @@ public interface LigneCommandeClientService {
 
     List<LigneCommandeClientDto> findAllByCommandeClientId(Integer idCommandeClient);
 
-    List<LigneCommandeClientDto> findAllByCommandeClientCode(String codeCommandeClient);
+    List<LigneCommandeClientDto> findAllByFormationId(Integer idFormation);
 
     List<LigneCommandeClientDto> findAll();
 

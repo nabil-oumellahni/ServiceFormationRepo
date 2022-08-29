@@ -1,6 +1,5 @@
 package com.oumellahni.serviceformation.repository;
 
-import com.oumellahni.serviceformation.model.Category;
 import com.oumellahni.serviceformation.model.Formation;
 import org.springframework.data.jpa.repository.JpaRepository;
 

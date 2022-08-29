@@ -1,8 +1,9 @@
 package com.oumellahni.serviceformation.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
@@ -12,7 +13,8 @@ import java.math.BigDecimal;
  * at 7:37 PM - 8/17/2022
  */
 
-@Data
+@Setter
+@Getter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
@@ -23,6 +25,10 @@ public class LigneCommandeClient extends AbstractEntity {
     private BigDecimal prixUnitaire;
 
     @ManyToOne
-    @JoinColumn(name = "id_commandeclient")
+    @JoinColumn
     private CommandeClient commandeClient;
+
+    @ManyToOne
+    @JoinColumn
+    private Formation formation;
 }
